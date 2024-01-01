@@ -31,16 +31,14 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Great Places',
       theme: theme,
-      home: const Scaffold(
-        body: PlacesListScreen(),
-      ),
+      home: const PlacesListScreen(),
     );
   }
 }

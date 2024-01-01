@@ -21,6 +21,7 @@ class PlacesList extends StatelessWidget {
     }
 
     return ListView.builder(
+      itemCount: places.length,
       itemBuilder: (contex, index) => ListTile(
         title: Text(
           places[index].title,
@@ -28,7 +29,6 @@ class PlacesList extends StatelessWidget {
                 color: Theme.of(context).colorScheme.onBackground,
               ),
         ),
-        onTap: () {},
       ),
     );
   }
