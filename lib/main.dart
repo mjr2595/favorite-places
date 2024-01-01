@@ -1,3 +1,4 @@
+import 'package:favorite_places/screens/places_list.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -39,15 +40,7 @@ class MyApp extends StatelessWidget {
       title: 'Great Places',
       theme: theme,
       home: const Scaffold(
-        body: Center(
-          child: Text(
-            'Hello World',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ),
+        body: PlacesListScreen(),
       ),
     );
   }
