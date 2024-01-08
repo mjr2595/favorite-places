@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_config/flutter_config.dart';
 
 import 'package:favorite_places/models/place.dart';
-import 'package:favorite_places/google_maps_key.dart';
 
 class PlaceDetailScreen extends StatelessWidget {
   const PlaceDetailScreen({super.key, required this.place});
@@ -9,9 +9,10 @@ class PlaceDetailScreen extends StatelessWidget {
   final Place place;
 
   String get locationImage {
+    final mapsKey = FlutterConfig.get('MAPS_KEY');
     final lat = place.location.latitude;
     final lng = place.location.longitude;
-    return 'https://maps.googleapis.com/maps/api/staticmap?center=$lat,$lng&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7C$lat,$lng&key=$maps_key';
+    return 'https://maps.googleapis.com/maps/api/staticmap?center=$lat,$lng&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7C$lat,$lng&key=$mapsKey';
   }
 
   @override
